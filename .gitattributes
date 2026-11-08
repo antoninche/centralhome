@@ -1,3 +1,2 @@
-# Site construit par outils/construire.py et publié par GitHub Pages :
-# fichiers générés, repliés dans les comparaisons et exclus des statistiques de langage.
-docs/** linguist-generated
+# Le site publié se trouve dans docs/ : ses fichiers comptent dans les langages du dépôt.
+docs/** linguist-documentation=false linguist-generated=false
