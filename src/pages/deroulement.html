@@ -1,0 +1,122 @@
+<!--page {
+  "titre": "Comment se passe une installation domotique | {{site.nom}}",
+  "description": "Du premier e-mail à la remise du dossier : les cinq étapes d’une installation, le diagnostic à domicile, le paiement et tout ce que vous gardez à la fin.",
+  "chemin": "deroulement.html",
+  "classe_corps": "a-barre-mobile"
+} -->
+{{> tete}}
+{{> entete}}
+<main id="contenu">
+  <section class="tete-page" aria-labelledby="t-page" data-haut>
+    <div class="conteneur">
+      <p class="surtitre">Comment ça se passe</p>
+      <h1 id="t-page">De la demande à l’installation, en cinq étapes</h1>
+      <p class="chapo">Chaque étape est écrite à l’avance&nbsp;: vous savez toujours ce qui vient ensuite, ce que vous payez et quand.</p>
+      <div class="actions">
+        <a class="bouton" href="devis.html">Demander un diagnostic<svg class="icone" aria-hidden="true" focusable="false"><use href="#i-fleche"/></svg></a>
+        <a class="bouton bouton-second" href="tarifs.html">Voir les prix</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Les cinq étapes">
+    <div class="conteneur">
+      <ol class="etapes etapes-verticales">
+        <li class="etape">
+          <span class="etape-num" aria-hidden="true">1</span>
+          <h2>Vous m’écrivez</h2>
+          <p>Le formulaire prend deux minutes. Dites-moi ce que vous avez déjà et ce que vous aimeriez changer. Vous ne payez rien en l’envoyant.</p>
+        </li>
+        <li class="etape">
+          <span class="etape-num" aria-hidden="true">2</span>
+          <h2>Je vous réponds par e-mail</h2>
+          <p>Sous {{contact.delai_reponse}}, avec mes questions éventuelles et un créneau pour le diagnostic. Je vous donne alors mon numéro pour organiser la visite.</p>
+        </li>
+        <li class="etape">
+          <span class="etape-num" aria-hidden="true">3</span>
+          <h2>Le diagnostic chez vous</h2>
+          <p>Environ une heure, pour {{prix.diagnostic|euros}}&nbsp;: je regarde votre <span class="insecable">Wi-Fi</span>, votre box et vos objets. Vous recevez ensuite une page de compte rendu et une proposition d’installation avec son prix. Vous prenez le temps de décider, et vous l’acceptez par écrit.</p>
+        </li>
+        <li class="etape">
+          <span class="etape-num" aria-hidden="true">4</span>
+          <h2>J’installe chez vous</h2>
+          <p>Vous achetez le matériel à votre nom, puis je pose et je règle tout, le plus souvent un samedi ou pendant les vacances universitaires. On essaie chaque automatisme ensemble, et je vous montre comment tout commander.</p>
+        </li>
+        <li class="etape">
+          <span class="etape-num" aria-hidden="true">5</span>
+          <h2>Je vous remets tout</h2>
+          <p>Les accès, la sauvegarde et un dossier écrit pour votre logement. Pendant 30&nbsp;jours, 1&nbsp;h d’ajustements à distance est comprise.</p>
+        </li>
+      </ol>
+      <div class="encadre">
+        <svg class="icone" aria-hidden="true" focusable="false"><use href="#i-euro"/></svg>
+        <p>{{> paiement}}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" aria-labelledby="t-propriete">
+    <div class="conteneur deux-colonnes">
+      <div>
+        <p class="surtitre">Vous gardez la main</p>
+        <h2 id="t-propriete">À la fin, tout est à vous</h2>
+        <p class="chapo">Tout est installé à votre nom, sur du matériel courant, et expliqué par écrit.</p>
+        <ul class="coches">
+          <li>Le matériel, acheté à votre nom, avec sa facture et sa garantie.</li>
+          <li>Les accès administrateur de votre installation.</li>
+          <li>Une sauvegarde chiffrée, dont je vérifie qu’elle se restaure.</li>
+          <li>Un dossier écrit pour votre logement.</li>
+          <li>Une installation basée sur Home Assistant, un logiciel libre&nbsp;: un autre installateur peut la reprendre.</li>
+        </ul>
+      </div>
+      <div class="dossier" role="group" aria-label="Exemple de sommaire du dossier remis">
+        <div class="dossier-tete">
+          <span class="pastille-icone"><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-document"/></svg></span>
+          <div><strong>Dossier de votre installation</strong><span>remis à la fin de la pose</span></div>
+        </div>
+        <ol>
+          <li>Schéma de votre réseau <span>1 page</span></li>
+          <li>Inventaire du matériel <span>avec les factures</span></li>
+          <li>Vos automatismes, expliqués <span>un par un</span></li>
+          <li>Comptes et accès administrateur <span>à votre nom</span></li>
+          <li>Clé de secours des sauvegardes <span>sur papier</span></li>
+          <li>Comment tout couper <span>en cas de besoin</span></li>
+          <li>Faire reprendre l’installation <span>par un autre</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="t-apres">
+    <div class="conteneur">
+      <div class="section-tete">
+        <p class="surtitre">Après l’installation</p>
+        <h2 id="t-apres">Ensuite, vous choisissez</h2>
+      </div>
+      <div class="trois-cartes">
+        <article aria-labelledby="t-autonome">
+          <h3 id="t-autonome">Vous êtes autonome</h3>
+          <p>Vous avez les accès, la sauvegarde et le dossier. Rien n’est à payer ensuite, et aucun abonnement n’est obligatoire.</p>
+        </article>
+        <article aria-labelledby="t-suivi-an">
+          <h3 id="t-suivi-an">Le suivi annuel</h3>
+          <p class="option-prix">{{prix.suivi|euros}} <span>par an</span></p>
+          <p>Deux mises à jour par an, vos sauvegardes contrôlées et une réponse par e-mail sous {{contact.delai_reponse}}. Il ne se renouvelle pas tout seul.</p>
+        </article>
+        <article aria-labelledby="t-aide">
+          <h3 id="t-aide">Une aide ponctuelle</h3>
+          <p class="option-prix">{{prix.aide_distance|euros}} <span>à distance</span></p>
+          <p>Une séance d’une heure au plus. À domicile&nbsp;: {{prix.heure_domicile_premiere|euros}} la première heure, déplacement compris, puis {{prix.heure_domicile_suivante|euros}} l’heure.</p>
+        </article>
+      </div>
+      <p class="lien-suite"><a class="lien-fleche" href="tarifs.html">Voir le détail des tarifs<svg class="icone" aria-hidden="true" focusable="false"><use href="#i-fleche"/></svg></a></p>
+    </div>
+  </section>
+
+  {{> appel}}
+
+</main>
+{{> pied}}
+{{> barre-mobile}}
+</body>
+</html>

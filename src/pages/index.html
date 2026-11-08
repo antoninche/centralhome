@@ -1,0 +1,309 @@
+<!--page {
+  "titre": "Domotique à Marseille, installée chez vous | {{site.nom}}",
+  "description": "Domotique locale à Marseille : vos objets connectés réunis dans une application claire, simple et sécurisée, installée chez vous. Diagnostic à domicile {{prix.diagnostic|euros}}.",
+  "chemin": "",
+  "classe_corps": "a-barre-mobile",
+  "jsonld": true
+} -->
+{{> tete}}
+{{> entete}}
+<main id="contenu">
+
+  <section class="ouverture" aria-labelledby="t-ouverture" data-haut>
+    <div class="conteneur ouverture-grille">
+      <div>
+        <p class="surtitre">Domotique à Marseille</p>
+        <h1 id="t-ouverture">Vos objets connectés réunis dans une seule application</h1>
+        <p class="chapo">J’installe chez vous, à Marseille, une application claire, pensée pour toute la famille et bien protégée. Elle réunit lumières, prises, capteurs et chauffage, même de marques différentes, et l’essentiel continue de marcher quand internet est coupé.</p>
+        <div class="actions">
+          <a class="bouton" href="devis.html">Demander un diagnostic<svg class="icone" aria-hidden="true" focusable="false"><use href="#i-fleche"/></svg></a>
+          <a class="bouton bouton-second" href="tarifs.html">Voir les prix</a>
+        </div>
+        <ul class="garanties">
+          <li><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-coche"/></svg>Réponse par e-mail sous {{contact.delai_reponse}}</li>
+          <li><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-coche"/></svg>Diagnostic à domicile&nbsp;: {{prix.diagnostic|euros}}</li>
+          <li><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-coche"/></svg>Sans travaux, même en location</li>
+        </ul>
+      </div>
+
+      <figure class="ouverture-visuel">
+        <div class="ouverture-photo">
+          {{photo ouverture "" "(max-width: 900px) 100vw, (max-width: 1240px) 42vw, 510px" eager}}
+        </div>
+        <div class="carte-app" role="img" aria-label="Exemple d’écran de l’application : la lumière de l’entrée allumée, 20,5 degrés dans le salon, la porte d’entrée fermée, aucune fuite sous l’évier et la consommation du lave-linge.">
+          <div class="carte-app-tete" aria-hidden="true"><span>Ma maison</span><span class="carte-app-local">En local</span></div>
+          <ul aria-hidden="true">
+            <li><span class="carte-app-ico est-actif"><svg class="icone"><use href="#i-ampoule"/></svg></span><span class="carte-app-nom">Entrée<small>Lumière</small></span><span class="interrupteur est-actif"></span></li>
+            <li><span class="carte-app-ico"><svg class="icone"><use href="#i-thermometre"/></svg></span><span class="carte-app-nom">Salon<small>Température</small></span><span class="carte-app-valeur">20,5&nbsp;°C</span></li>
+            <li><span class="carte-app-ico"><svg class="icone"><use href="#i-porte"/></svg></span><span class="carte-app-nom">Porte d’entrée<small>Capteur d’ouverture</small></span><span class="carte-app-valeur">Fermée</span></li>
+            <li><span class="carte-app-ico"><svg class="icone"><use href="#i-goutte"/></svg></span><span class="carte-app-nom">Sous l’évier<small>Détecteur de fuite</small></span><span class="carte-app-valeur">Sec</span></li>
+            <li><span class="carte-app-ico"><svg class="icone"><use href="#i-eclair"/></svg></span><span class="carte-app-nom">Lave-linge<small>Aujourd’hui</small></span><span class="carte-app-valeur">0,6&nbsp;kWh</span></li>
+          </ul>
+        </div>
+        <figcaption class="ouverture-legende">Exemple d’écran de l’application</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section section-serree" aria-labelledby="t-atouts">
+    <div class="conteneur">
+      <h2 id="t-atouts" class="visuellement-cache">L’essentiel</h2>
+      <ul class="atouts">
+        <li class="atout">
+          <span class="pastille-icone"><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-tuiles"/></svg></span>
+          <h3>Une interface claire</h3>
+          <p>Un tableau de bord rangé pièce par pièce&nbsp;: lumières, chauffage et alertes au même endroit. Je le dessine avec vous, à votre goût.</p>
+        </li>
+        <li class="atout">
+          <span class="pastille-icone"><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-personnes"/></svg></span>
+          <h3>Simple pour toute la famille</h3>
+          <p>De grandes tuiles lisibles, en français, sur téléphone, tablette ou ordinateur. Chaque personne a son propre compte.</p>
+        </li>
+        <li class="atout">
+          <span class="pastille-icone"><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-cadenas"/></svg></span>
+          <h3>Sécurisée, et chez vous</h3>
+          <p>Tout fonctionne sur un petit boîtier posé chez vous et à votre nom. Chaque compte est protégé par un mot de passe et un code à usage unique, et je règle les mises à jour et les sauvegardes.</p>
+        </li>
+        <li class="atout">
+          <span class="pastille-icone"><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-reseau"/></svg></span>
+          <h3>Plusieurs marques réunies</h3>
+          <p>Des objets de marques différentes, certifiés Matter ou Zigbee, ou qui fonctionnent en <span class="insecable">Wi-Fi</span>&nbsp;: je vérifie les vôtres un par un.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="t-principe">
+    <div class="conteneur deux-colonnes">
+      <div>
+        <p class="surtitre">Le principe</p>
+        <h2 id="t-principe">Un boîtier au centre de votre logement</h2>
+        <p class="chapo">Vos appareils se relient à un petit boîtier, posé chez vous près de votre box internet. Lumières, chauffage, prises et capteurs, même de marques différentes, se retrouvent alors dans une seule application.</p>
+        <p>Le boîtier est acheté à votre nom et reste chez vous&nbsp;: c’est lui qui fait marcher l’essentiel, même quand internet est coupé.</p>
+      </div>
+      <figure class="illustration">
+        <img src="images/illustration.svg" width="640" height="400" alt="Schéma d’une pièce&nbsp;: la lumière, le chauffage, la consommation électrique et un détecteur de fuite, reliés au boîtier placé au centre." loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section section-alt" aria-labelledby="t-tarifs">
+    <div class="conteneur">
+      <div class="section-tete centre">
+        <p class="surtitre">Tarifs</p>
+        <h2 id="t-tarifs">Un diagnostic, puis un prix fixe</h2>
+        <p>Je viens d’abord voir votre logement, puis je vous envoie une proposition écrite avec son prix. Vous achetez le matériel à votre nom&nbsp;: je vous dis quoi prendre, et je ne revends rien.</p>
+      </div>
+      <div class="formules">
+        <article class="formule" aria-labelledby="fa-diagnostic">
+          <div>
+            <h3 id="fa-diagnostic">Diagnostic à domicile</h3>
+            <p class="formule-pour">Pour savoir ce qui est possible chez vous</p>
+          </div>
+          <p class="prix"><span class="prix-montant">{{prix.diagnostic|euros}}</span><span class="prix-unite">la visite</span></p>
+          <ul class="coches">
+            <li>Environ une heure chez vous</li>
+            <li>Une page de compte rendu</li>
+            <li>Une proposition d’installation avec son prix</li>
+          </ul>
+          <a class="bouton bouton-second" href="devis.html?demande=diagnostic">Demander un diagnostic</a>
+        </article>
+        <article class="formule formule-phare" aria-labelledby="fa-installation">
+          <p class="formule-etiquette">Prix fixé après le diagnostic</p>
+          <div>
+            <h3 id="fa-installation">Installation complète</h3>
+            <p class="formule-pour">Vos objets réunis dans une application claire et sécurisée</p>
+          </div>
+          <p class="prix"><span class="prix-unite">à partir de</span><span class="prix-montant">{{prix.mise_en_service|euros}}</span></p>
+          <ul class="coches">
+            <li>Jusqu’à {{prix.appareils_inclus}}&nbsp;appareils reliés et réglés, puis {{prix.appareil_sup|euros}} par appareil</li>
+            <li>Un tableau de bord clair, des comptes protégés et des sauvegardes chiffrées</li>
+            <li>1&nbsp;h de prise en main, un dossier écrit et 30&nbsp;jours d’ajustements</li>
+          </ul>
+          <p class="prix-complement">Matériel en plus, acheté à votre nom&nbsp;: environ {{prix.boitier|euros}} pour le boîtier, puis vos appareils.</p>
+          <a class="bouton" href="devis.html?demande=diagnostic">Commencer par le diagnostic</a>
+        </article>
+        <article class="formule" aria-labelledby="fa-suivi">
+          <div>
+            <h3 id="fa-suivi">Suivi annuel</h3>
+            <p class="formule-pour">Pour que tout reste à jour, si vous le souhaitez</p>
+          </div>
+          <p class="prix"><span class="prix-montant">{{prix.suivi|euros}}</span><span class="prix-unite">par an</span></p>
+          <ul class="coches">
+            <li>Deux mises à jour par an</li>
+            <li>Vos sauvegardes contrôlées</li>
+            <li>Sans reconduction</li>
+          </ul>
+          <a class="bouton bouton-second" href="devis.html?demande=suivi">En parler</a>
+        </article>
+      </div>
+      <p class="lien-suite centre"><a class="lien-fleche" href="tarifs.html">Voir le détail des prix et un exemple de budget<svg class="icone" aria-hidden="true" focusable="false"><use href="#i-fleche"/></svg></a></p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="t-usages">
+    <div class="conteneur">
+      <div class="section-tete">
+        <p class="surtitre">Au quotidien</p>
+        <h2 id="t-usages">Lumière, chauffage, alertes, consommation</h2>
+        <p>Des automatismes simples, choisis avec vous selon vos habitudes. Chaque lumière et chaque appareil se commande aussi comme avant.</p>
+      </div>
+      {{#si photos.usages}}<div class="bandeau-photos">
+        <figure>{{photo usage-lumiere "" "(max-width: 700px) 100vw, (max-width: 1240px) 30vw, 380px"}}</figure>
+        <figure>{{photo usage-chauffage "" "(max-width: 700px) 50vw, (max-width: 1240px) 30vw, 380px"}}</figure>
+        <figure>{{photo usage-capteur "" "(max-width: 700px) 50vw, (max-width: 1240px) 30vw, 380px"}}</figure>
+      </div>
+      {{/si photos.usages}}<ul class="usages">
+        <li class="usage">
+          <span class="pastille-icone"><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-ampoule"/></svg></span>
+          <h3>Lumières et ambiances</h3>
+          <p>La lumière du couloir qui s’allume doucement la nuit, l’entrée éclairée quand vous rentrez le soir, un réveil lumineux les jours de semaine.</p>
+        </li>
+        <li class="usage">
+          <span class="pastille-icone"><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-radiateur"/></svg></span>
+          <h3>Chauffage pièce par pièce</h3>
+          <p>Si vos radiateurs à eau ont déjà des têtes thermostatiques connectées, je les relie à l’application&nbsp;: un programme par pièce, et le chauffage qui baisse quand une fenêtre reste ouverte.</p>
+        </li>
+        <li class="usage">
+          <span class="pastille-icone"><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-goutte"/></svg></span>
+          <h3>Alertes utiles</h3>
+          <p>Une notification en cas de fuite d’eau sous l’évier, si la porte d’entrée reste ouverte ou si la pile d’un capteur faiblit. Elle arrive sur votre téléphone et sur ceux des proches que vous choisissez.</p>
+        </li>
+      </ul>
+      <p class="lien-suite"><a class="lien-fleche" href="usages.html">Voir tous les usages et la compatibilité de vos objets<svg class="icone" aria-hidden="true" focusable="false"><use href="#i-fleche"/></svg></a></p>
+    </div>
+  </section>
+
+  <section class="section section-alt" aria-labelledby="t-deroulement">
+    <div class="conteneur">
+      <div class="section-tete">
+        <p class="surtitre">Comment ça se passe</p>
+        <h2 id="t-deroulement">De la demande à l’installation, en cinq étapes</h2>
+      </div>
+      <ol class="etapes">
+        <li class="etape">
+          <span class="etape-num" aria-hidden="true">1</span>
+          <h3>Vous m’écrivez</h3>
+          <p>Le formulaire prend deux minutes&nbsp;: votre logement, ce que vous avez, ce que vous aimeriez.</p>
+        </li>
+        <li class="etape">
+          <span class="etape-num" aria-hidden="true">2</span>
+          <h3>Je vous réponds par e-mail</h3>
+          <p>Sous {{contact.delai_reponse}}, avec un créneau pour le diagnostic.</p>
+        </li>
+        <li class="etape">
+          <span class="etape-num" aria-hidden="true">3</span>
+          <h3>Le diagnostic chez vous</h3>
+          <p>Environ une heure, pour {{prix.diagnostic|euros}}. Vous recevez une page de compte rendu et une proposition avec son prix.</p>
+        </li>
+        <li class="etape">
+          <span class="etape-num" aria-hidden="true">4</span>
+          <h3>J’installe chez vous</h3>
+          <p>Vous achetez le matériel à votre nom, puis je pose et je règle tout. On essaie chaque automatisme ensemble.</p>
+        </li>
+        <li class="etape">
+          <span class="etape-num" aria-hidden="true">5</span>
+          <h3>Je vous remets tout</h3>
+          <p>Les accès, la sauvegarde et un dossier écrit. Pendant 30&nbsp;jours, 1&nbsp;h d’ajustements à distance est comprise.</p>
+        </li>
+      </ol>
+      <p class="lien-suite"><a class="lien-fleche" href="deroulement.html">Voir le déroulement en détail et ce que vous gardez à la fin<svg class="icone" aria-hidden="true" focusable="false"><use href="#i-fleche"/></svg></a></p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="t-exemple">
+    <div class="conteneur deux-colonnes">
+      {{#si photos.tableau-de-bord}}<figure class="capture-ecran">
+        {{photo tableau-de-bord "" "(max-width: 900px) 100vw, (max-width: 1240px) 45vw, 555px"}}
+        <figcaption>Le tableau de bord de mon installation, chez moi.</figcaption>
+      </figure>
+      {{/si photos.tableau-de-bord}}<div>
+        <p class="surtitre">Un exemple réel</p>
+        <h2 id="t-exemple">Ce que je propose tourne déjà chez moi</h2>
+        <p class="chapo">Chez moi, Home Assistant réunit une dizaine d’objets de quatre technologies, avec 14 automatismes, dans un tableau de bord que j’ai dessiné moi-même. Une sauvegarde chiffrée part chaque nuit, et un essai complet de restauration se lance automatiquement chaque mois.</p>
+        <p>Mon serveur est décrit en détail, en public, sur GitHub&nbsp;: le matériel, le réseau, les sauvegardes et les choix que j’ai faits. La configuration de ma domotique, elle, reste privée.</p>
+        <p class="lien-suite"><a class="lien-fleche" href="qui-je-suis.html#installation">Voir des exemples d’automatismes<svg class="icone" aria-hidden="true" focusable="false"><use href="#i-fleche"/></svg></a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" aria-labelledby="t-qui">
+    <div class="conteneur apropos">
+      <div class="carte-identite">
+        <div class="carte-identite-photo">
+          <div class="monogramme" aria-hidden="true"><span>{{entreprise.initiales}}</span></div>
+        </div>
+        <div class="carte-identite-corps">
+          <p class="carte-identite-nom">{{entreprise.prenom}} {{entreprise.nom}}</p>
+          <p>Étudiant en licence MPCI à <span class="insecable">Aix-Marseille</span> Université</p>
+          <p class="petit">Mon installation, chez moi, en novembre 2026&nbsp;:</p>
+          <dl class="chiffres">
+            <div><dt>objets connectés</dt><dd>une dizaine</dd></div>
+            <div><dt>technologies réunies&nbsp;: Matter, Thread, Zigbee, HomeKit</dt><dd>4</dd></div>
+            <div><dt>automatismes</dt><dd>14</dd></div>
+            <div><dt>essai automatique de restauration des sauvegardes</dt><dd>1 par mois</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div>
+        <p class="surtitre">Qui je suis</p>
+        <h2 id="t-qui">Un seul interlocuteur, du devis au suivi</h2>
+        <p class="chapo">Je m’appelle {{entreprise.prenom}}. Je suis étudiant en licence MPCI à <span class="insecable">Aix-Marseille</span> Université, et je m’intéresse aux serveurs et à la domotique depuis plusieurs années.</p>
+        <p>Je travaille seul, à côté de mes études&nbsp;: je prends peu de foyers à la fois, et vous avez affaire à moi du premier échange au suivi. Je ne fais aucun travail électrique, pas de télésurveillance, et je ne vends pas de matériel.</p>
+        <p class="lien-suite"><a class="lien-fleche" href="qui-je-suis.html">En savoir plus sur moi et sur mes prestations<svg class="icone" aria-hidden="true" focusable="false"><use href="#i-fleche"/></svg></a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="t-zone">
+    <div class="conteneur">
+      <div class="zone">
+        {{#si photos.marseille}}{{photo marseille "-" "(max-width: 1240px) 100vw, 1180px"}}{{/si photos.marseille}}
+        <div class="zone-contenu">
+          <p class="surtitre">Zone d’intervention</p>
+          <h2 id="t-zone">À Marseille et autour</h2>
+          <p>Je me déplace en transports en commun, jusqu’à 45&nbsp;minutes de trajet&nbsp;: les arrondissements de Marseille et les communes proches.</p>
+          <p>Vous êtes un peu plus loin&nbsp;? Demandez-moi, je vous dis franchement si c’est possible.</p>
+          <div class="actions">
+            <a class="bouton" href="devis.html">Demander un diagnostic</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" aria-labelledby="t-questions">
+    <div class="conteneur">
+      <div class="section-tete centre">
+        <p class="surtitre">Questions et réponses</p>
+        <h2 id="t-questions">Avant de vous décider</h2>
+      </div>
+      <div class="questions">
+        <details class="question">
+          <summary>Combien coûte une installation&nbsp;?</summary>
+          <div><p>Comptez {{prix.diagnostic|euros}} pour le diagnostic, puis {{prix.mise_en_service|euros}} pour l’installation complète jusqu’à {{prix.appareils_inclus}}&nbsp;appareils, et {{prix.appareil_sup|euros}} par appareil en plus. Le matériel s’ajoute, acheté à votre nom&nbsp;: environ {{prix.boitier|euros}} pour le boîtier, une clé radio à {{prix.cle_radio|euros}} si vos appareils en ont besoin, puis vos appareils. Pour un appartement avec {{prix.exemple_appareils}}&nbsp;appareils, cela fait environ {{prix.exemple_total|euros}} hors appareils. La proposition donne le prix exact avant que vous ne vous engagiez.</p></div>
+        </details>
+        <details class="question">
+          <summary>Mes objets actuels sont-ils compatibles&nbsp;?</summary>
+          <div><p>Souvent, mais pas toujours. Les objets certifiés Matter ou Zigbee, et beaucoup d’objets <span class="insecable">Wi-Fi</span>, peuvent être réunis. Je les vérifie un par un pendant le diagnostic, et je vous dis lesquels resteront dépendants du service en ligne de leur marque. Ils comptent alors comme des appareils neufs dans le prix.</p></div>
+        </details>
+        <details class="question">
+          <summary>Que se passe-t-il quand internet est coupé&nbsp;?</summary>
+          <div><p>Les appareils reliés en local continuent de fonctionner, avec leurs automatismes. Ce qui s’arrête&nbsp;: l’accès depuis l’extérieur, les notifications quand vous n’êtes pas chez vous, et les objets qui dépendent du service en ligne de leur marque.</p></div>
+        </details>
+        <details class="question">
+          <summary>Je suis locataire&nbsp;: est-ce possible&nbsp;?</summary>
+          <div><p>Oui. Je ne fais aucun travail&nbsp;: les appareils se branchent sur une prise ou fonctionnent à piles, et les capteurs se fixent sans perçage si vous le préférez. Rien n’est encastré, et vous emportez tout en déménageant.</p></div>
+        </details>
+      </div>
+      <p class="lien-suite centre"><a class="lien-fleche" href="questions.html">Voir toutes les questions<svg class="icone" aria-hidden="true" focusable="false"><use href="#i-fleche"/></svg></a></p>
+    </div>
+  </section>
+
+  {{> appel}}
+
+</main>
+{{> pied}}
+{{> barre-mobile}}
+</body>
+</html>

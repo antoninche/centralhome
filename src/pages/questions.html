@@ -1,0 +1,93 @@
+<!--page {
+  "titre": "Questions et réponses sur l’installation domotique | {{site.nom}}",
+  "description": "Prix, abonnement, compatibilité de vos objets, coupure d’internet, travaux électriques, location, paiement et rétractation : les réponses avant de demander un diagnostic.",
+  "chemin": "questions.html",
+  "classe_corps": "a-barre-mobile"
+} -->
+{{> tete}}
+{{> entete}}
+<main id="contenu">
+  <section class="tete-page" aria-labelledby="t-page" data-haut>
+    <div class="conteneur">
+      <p class="surtitre">Questions et réponses</p>
+      <h1 id="t-page">Avant de vous décider</h1>
+      <p class="chapo">Une question qui n’est pas ici&nbsp;? Posez-la-moi&nbsp;: je vous réponds sous {{contact.delai_reponse}}.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Questions et réponses">
+    <div class="conteneur">
+      <div class="groupe-questions">
+        <h2>Prix et paiement</h2>
+        <div class="questions">
+          <details class="question">
+            <summary>Combien coûte une installation&nbsp;?</summary>
+            <div><p>Comptez {{prix.diagnostic|euros}} pour le diagnostic, puis {{prix.mise_en_service|euros}} pour l’installation complète jusqu’à {{prix.appareils_inclus}}&nbsp;appareils, et {{prix.appareil_sup|euros}} par appareil en plus. Une fonction en plus, comme un écran mural ou un automatisme supplémentaire, coûte à partir de {{prix.fonction_sup|euros}}. Le matériel s’ajoute, acheté à votre nom&nbsp;: environ {{prix.boitier|euros}} pour le boîtier, une clé radio à {{prix.cle_radio|euros}} si vos appareils en ont besoin, puis vos appareils. Pour un appartement avec {{prix.exemple_appareils}}&nbsp;appareils, cela fait environ {{prix.exemple_total|euros}} hors appareils. La proposition donne le prix exact avant que vous ne vous engagiez.</p></div>
+          </details>
+          <details class="question">
+            <summary>Faut-il payer un abonnement&nbsp;?</summary>
+            <div><p>Non. Votre installation fonctionne sans abonnement. Si vous voulez la commander hors de chez vous, je mets en place l’abonnement {{tiers.acces_distance_nom}} (anciennement {{tiers.acces_distance_ancien_nom}}), pris à votre nom chez {{tiers.acces_distance_editeur}}&nbsp;: {{tiers.acces_distance_prix}}. Il existe d’autres solutions, dont certaines gratuites. Je choisis celle-ci parce qu’elle n’ouvre aucun accès sur votre box, qu’elle garde hors de chez vous une copie chiffrée de votre dernière sauvegarde et que vous pouvez la couper vous-même. Mon suivi à distance passe aussi par cet abonnement. L’abonnement se renouvelle automatiquement chez {{tiers.acces_distance_editeur}}, et vous pouvez le résilier quand vous voulez.</p></div>
+          </details>
+          <details class="question">
+            <summary>Comment se passe le paiement&nbsp;?</summary>
+            <div><p>{{> paiement}}</p></div>
+          </details>
+          <details class="question">
+            <summary>Puis-je changer d’avis après avoir accepté la proposition&nbsp;?</summary>
+            <div><p>Oui. Comme le prévoit la loi, si vous acceptez la proposition à distance ou à votre domicile, vous disposez de 14&nbsp;jours à compter de votre acceptation pour vous rétracter, sans avoir à vous justifier ni à payer de frais. Il suffit de m’envoyer le formulaire de rétractation joint à la proposition, ou un simple message clair. Je vous rembourse toute somme versée au plus tard 14&nbsp;jours après avoir reçu votre décision.</p><p>Je ne commence avant la fin de ce délai que si vous me le demandez par écrit. Si vous vous rétractez ensuite, vous ne payez que la part de la prestation déjà réalisée, en proportion du prix total. Une fois la prestation entièrement réalisée à votre demande, vous ne pouvez plus vous rétracter.</p></div>
+          </details>
+        </div>
+      </div>
+      <div class="groupe-questions">
+        <h2>Votre installation</h2>
+        <div class="questions">
+          <details class="question">
+            <summary>Mes objets actuels sont-ils compatibles&nbsp;?</summary>
+            <div><p>Souvent, mais pas toujours. Les objets certifiés Matter ou Zigbee, et beaucoup d’objets <span class="insecable">Wi-Fi</span>, peuvent être réunis. Je les vérifie un par un pendant le diagnostic, et je vous dis lesquels resteront dépendants du service en ligne de leur marque. Un objet que je ne peux pas relier ne vous est pas facturé.</p></div>
+          </details>
+          <details class="question">
+            <summary>Que se passe-t-il quand internet est coupé&nbsp;?</summary>
+            <div><p>Les appareils reliés en local continuent de fonctionner, avec leurs automatismes. Ce qui s’arrête&nbsp;: l’accès depuis l’extérieur, les notifications quand vous n’êtes pas chez vous, et les objets qui dépendent du service en ligne de leur marque.</p></div>
+          </details>
+          <details class="question">
+            <summary>Faites-vous les travaux électriques&nbsp;?</summary>
+            <div><p>Non. Les appareils que j’installe se branchent sur une prise existante ou fonctionnent à piles. Pour un interrupteur, un volet ou un thermostat à raccorder, il faut un électricien qualifié, que vous choisissez et payez directement&nbsp;: je peux vous dire quoi lui demander.</p></div>
+          </details>
+          <details class="question">
+            <summary>Je suis locataire&nbsp;: est-ce possible&nbsp;?</summary>
+            <div><p>Oui. Je ne fais aucun travail&nbsp;: les appareils se branchent sur une prise ou fonctionnent à piles, et les capteurs se fixent sans perçage si vous le préférez. Rien n’est encastré, et vous emportez tout en déménageant.</p></div>
+          </details>
+        </div>
+      </div>
+      <div class="groupe-questions">
+        <h2>Confiance et disponibilité</h2>
+        <div class="questions">
+          <details class="question">
+            <summary>Pouvez-vous voir ce qui se passe chez moi&nbsp;?</summary>
+            <div><p>Seulement si vous m’ouvrez par écrit un accès à distance, pour les ajustements des 30 premiers jours, une aide à distance ou le suivi. Cet accès administrateur montre l’état et l’historique des appareils, par exemple une lumière allumée, une porte ouverte ou une température. Je ne m’en sers que pour le fonctionnement technique de l’installation (réglages, mises à jour, sauvegardes)&nbsp;: je ne reçois pas vos alertes, et je ne consulte l’historique d’un appareil que lorsqu’un réglage l’exige. Chaque intervention est notée, et vous pouvez couper l’accès à tout moment.</p></div>
+          </details>
+          <details class="question">
+            <summary>Vous êtes étudiant&nbsp;: est-ce un cadre sérieux&nbsp;?</summary>
+            <div><p>Je vous remets une proposition écrite avant de commencer, puis une facture.{{#si assurance.assureur}} Je suis assuré en responsabilité civile professionnelle auprès de {{assurance.assureur}}.{{/si assurance.assureur}}{{#si entreprise.siren}} En cas de litige, vous pouvez saisir gratuitement le médiateur de la consommation indiqué en bas de page.{{/si entreprise.siren}}</p><p>Et si j’arrête un jour, vous gardez tout&nbsp;: les accès, la sauvegarde et le dossier, sur un logiciel que d’autres installateurs savent reprendre. Je ne vends jamais de suivi au-delà de la date à laquelle je sais pouvoir l’assurer, et si je devais l’arrêter plus tôt, les mois non servis vous seraient remboursés.</p></div>
+          </details>
+          <details class="question">
+            <summary>Quand pouvez-vous venir&nbsp;?</summary>
+            <div><p>Surtout le samedi et pendant les vacances universitaires. Je vous propose un créneau par e-mail pour le diagnostic, puis une date pour l’installation avec la proposition.</p></div>
+          </details>
+          <details class="question">
+            <summary>Peut-on vous appeler&nbsp;?</summary>
+            <div><p>Oui&nbsp;: mon numéro est dans les <a href="mentions-legales.html">mentions légales</a>. Si je ne peux pas décrocher, je vous rappelle sous {{contact.delai_reponse}}. Pour un premier contact, le plus simple reste de m’écrire&nbsp;: j’ai ainsi votre description sous les yeux.</p></div>
+          </details>
+        </div>
+      </div>
+      <p class="apres-questions">Une autre question&nbsp;? <a href="devis.html">Posez-la-moi directement</a>, je vous réponds sous {{contact.delai_reponse}}.</p>
+    </div>
+  </section>
+
+  {{> appel}}
+
+</main>
+{{> pied}}
+{{> barre-mobile}}
+</body>
+</html>

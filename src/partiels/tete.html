@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{page.titre}}</title>
+<meta name="description" content="{{page.description}}">
+{{#si robots}}<meta name="robots" content="{{robots}}">
+{{/si robots}}{{#si site.url}}<link rel="canonical" href="{{site.url}}/{{page.chemin}}">
+{{/si site.url}}<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F5F8FB" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B131B" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="{{site.nom}}">
+<meta property="og:title" content="{{page.titre}}">
+<meta property="og:description" content="{{page.description}}">
+{{#si site.url}}<meta property="og:url" content="{{site.url}}/{{page.chemin}}">
+<meta property="og:image" content="{{site.url}}/images/partage.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{site.nom}}, domotique locale à Marseille">
+{{/si site.url}}<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/icone-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="images/icone-180.png">
+<link rel="preload" href="polices/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{actifs.css}}">
+<script>document.documentElement.classList.add("js")</script>
+<script src="{{actifs.js}}" defer></script>
+{{{page.tete_extra}}}
+</head>

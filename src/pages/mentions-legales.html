@@ -1,0 +1,66 @@
+<!--page {
+  "titre": "Mentions légales | {{site.nom}}",
+  "description": "Qui édite ce site, qui l’héberge, le médiateur de la consommation, les marques citées et les crédits des photos.",
+  "chemin": "mentions-legales.html"
+} -->
+{{> tete}}
+{{> entete}}
+<main id="contenu">
+  <div class="conteneur conteneur-etroit page-tete">
+    <h1>Mentions légales</h1>
+    <p class="date-maj">Dernière mise à jour&nbsp;: {{date_maj}}</p>
+  </div>
+
+  <div class="conteneur conteneur-etroit texte-long">
+    <h2>Éditeur du site</h2>
+    <dl>
+      <dt>Éditeur</dt><dd>{{entreprise.nom_legal}}</dd>
+      <dt>Nom commercial</dt><dd>{{site.nom}}</dd>
+      {{#si entreprise.siren}}<dt>Immatriculation</dt><dd>{{entreprise.registre}}{{#si entreprise.rcs}}, {{entreprise.rcs}}{{/si entreprise.rcs}}, SIREN {{entreprise.siren}}</dd>
+      {{/si entreprise.siren}}
+      <dt>Adresse</dt><dd>{{entreprise.adresse}}</dd>
+      <dt>Téléphone</dt><dd>{{#si contact.telephone}}<a href="tel:{{contact.tel_lien}}">{{contact.telephone}}</a>{{/si contact.telephone}}{{#sinon contact.telephone}}{{contact.telephone}}{{/sinon contact.telephone}} (appel non surtaxé). Si je ne peux pas répondre, laissez-moi un message&nbsp;: je vous rappelle sous {{contact.delai_reponse}}.</dd>
+      <dt>E-mail</dt><dd><a href="mailto:{{contact.email_lien}}">{{contact.email}}</a></dd>
+      {{#si entreprise.siren}}<dt>TVA</dt><dd>TVA non applicable, article 293&nbsp;B du Code général des impôts{{#si entreprise.tva_intracom}}. Numéro de TVA intracommunautaire&nbsp;: {{entreprise.tva_intracom}}{{/si entreprise.tva_intracom}}</dd>
+      {{/si entreprise.siren}}
+      <dt>Directeur de la publication</dt><dd>{{entreprise.prenom}} {{entreprise.nom}}</dd>
+    </dl>
+
+    <h2>Hébergeur</h2>
+    <dl>
+      <dt>Société</dt><dd>{{hebergeur.nom}}</dd>
+      <dt>Adresse</dt><dd>{{hebergeur.adresse}}</dd>
+      <dt>Téléphone</dt><dd>{{hebergeur.telephone}}</dd>
+    </dl>
+
+    <h2>Médiation de la consommation</h2>
+    <p>En cas de litige, adressez-moi d’abord une réclamation écrite, par e-mail ou par courrier. Si nous ne trouvons pas de solution, vous pouvez saisir gratuitement le médiateur de la consommation dont je relève, dans un délai d’un an à compter de votre réclamation écrite&nbsp;:</p>
+    <dl>
+      <dt>Médiateur</dt><dd>{{mediateur.nom}}</dd>
+      <dt>Adresse</dt><dd>{{mediateur.adresse}}</dd>
+      <dt>Site internet</dt><dd>{{#si mediateur.site}}<a href="{{mediateur.site_lien}}">{{mediateur.site}}</a>{{/si mediateur.site}}{{#sinon mediateur.site}}{{mediateur.site}}{{/sinon mediateur.site}}</dd>
+    </dl>
+    {{#si assurance.assureur}}
+    <h2>Assurance professionnelle</h2>
+    <dl>
+      <dt>Assureur</dt><dd>{{assurance.assureur}}{{#si assurance.adresse}}, {{assurance.adresse}}{{/si assurance.adresse}}</dd>
+      <dt>Garantie</dt><dd>responsabilité civile professionnelle</dd>
+      {{#si assurance.couverture}}<dt>Couverture géographique</dt><dd>{{assurance.couverture}}</dd>{{/si assurance.couverture}}
+    </dl>
+    {{/si assurance.assureur}}
+    <h2>Propriété intellectuelle et crédits</h2>
+    <p>Les textes, le logo et les illustrations du site sont de moi.</p>
+    {{{credits_photos}}}
+    <p>La police de caractères Inter est distribuée sous la licence SIL Open Font License&nbsp;1.1.</p>
+
+    <h2>Marques citées</h2>
+    <p>Home Assistant est une marque de l’Open Home Foundation. Matter et Zigbee sont des marques de la Connectivity Standards Alliance. Thread est une marque du Thread Group. HomeKit est une marque d’Apple Inc. Toutes les marques citées appartiennent à leurs propriétaires respectifs.</p>
+    <p>Je ne suis affilié à aucune de ces organisations, ni à Nabu Casa, qui vend le boîtier Home Assistant Green, la clé Home Assistant Connect ZBT-2 et l’abonnement Home Assistant Link. Aucune d’elles n’a approuvé mes prestations. Je cite ces noms seulement pour décrire le logiciel et le matériel que j’installe.</p>
+
+    <h2>Données personnelles et cookies</h2>
+    <p>Ce site ne dépose aucun cookie et ne mesure pas l’audience. Ce que deviennent les informations que vous m’envoyez est expliqué sur la page <a href="confidentialite.html">Données personnelles</a>.</p>
+  </div>
+</main>
+{{> pied}}
+</body>
+</html>

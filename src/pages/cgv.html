@@ -1,0 +1,129 @@
+<!--page {
+  "titre": "Conditions générales de vente | {{site.nom}}",
+  "description": "Les conditions de mes prestations pour les particuliers : diagnostic, installation, suivi annuel et aide ponctuelle. Prix, paiement, rétractation, responsabilité et médiation.",
+  "chemin": "cgv.html"
+} -->
+{{> tete}}
+{{> entete}}
+<main id="contenu">
+  <div class="conteneur conteneur-etroit page-tete">
+    <h1>Conditions générales de vente</h1>
+    <p class="date-maj">Dernière mise à jour&nbsp;: {{date_maj}}</p>
+  </div>
+
+  <div class="conteneur conteneur-etroit texte-long">
+    <h2>1. Qui je suis</h2>
+    <p>Je suis {{entreprise.nom_legal}}{{#si site.nom}}, nom commercial {{site.nom}}{{/si site.nom}}.{{#si entreprise.siren}} Immatriculation&nbsp;: {{entreprise.registre}}{{#si entreprise.rcs}}, {{entreprise.rcs}}{{/si entreprise.rcs}}, SIREN {{entreprise.siren}}.{{/si entreprise.siren}}</p>
+    <p>Adresse&nbsp;: {{entreprise.adresse}}. E-mail&nbsp;: <a href="mailto:{{contact.email_lien}}">{{contact.email}}</a>. Téléphone&nbsp;: {{#si contact.telephone}}<a href="tel:{{contact.tel_lien}}">{{contact.telephone}}</a>{{/si contact.telephone}}{{#sinon contact.telephone}}{{contact.telephone}}{{/sinon contact.telephone}} (appel non surtaxé). Vous pouvez m’écrire ou m’appeler pour toute question sur votre contrat.</p>
+    {{#si assurance.assureur}}<p>Assurance de responsabilité civile professionnelle&nbsp;: {{assurance.assureur}}, {{assurance.adresse}}. Zone couverte&nbsp;: {{assurance.couverture}}.</p>
+    {{/si assurance.assureur}}
+    <h2>2. Ce que couvrent ces conditions</h2>
+    <p>Ces conditions s’appliquent à toutes mes prestations pour les particuliers, par exemple le diagnostic à domicile, l’installation, le suivi annuel et l’aide ponctuelle, à distance ou à domicile.</p>
+    <p>Je les joins à chaque devis. Avec le devis que vous acceptez, elles forment notre contrat. Si je les modifie un jour, c’est toujours la version jointe à votre devis qui s’applique. Vous pouvez les enregistrer et les imprimer.</p>
+
+    <h2>3. Devis et commande</h2>
+    <p>Pour chaque prestation, je vous envoie un devis par e-mail, ou sur papier si vous le préférez. Il indique ce que je fais, ce qui n’est pas compris, le prix total, les dates de paiement, la date ou le délai de l’intervention, et jusqu’à quelle date vous pouvez l’accepter. J’y joins ces conditions et le formulaire de rétractation.</p>
+    <p>Pour une installation, je fais d’abord le diagnostic à domicile, puis je vous envoie le devis de l’installation, avec une page de compte rendu. Ce devis est compris dans le prix du diagnostic. Son montant dépend du nombre d’appareils et des fonctions que vous choisissez.</p>
+    <p>Vous acceptez le devis par écrit, à distance&nbsp;: en répondant à mon e-mail ou en me renvoyant le devis signé. Je ne fais rien signer chez vous. Si vous voulez ajouter quelque chose pendant une visite, je vous envoie ensuite un nouveau devis.</p>
+    <p>Le contrat est conclu le jour où je reçois votre acceptation. Je vous la confirme par e-mail, ou sur papier si vous le préférez, avec le devis accepté et daté, ces conditions et le formulaire de rétractation.</p>
+
+    <h2>4. Prix</h2>
+    <p>Mes prix sont en euros. Le prix indiqué dans le devis est le prix total que vous payez, déplacement compris dans ma zone d’intervention (45&nbsp;minutes en transports en commun autour de Marseille).{{#si entreprise.siren}} TVA non applicable, article 293&nbsp;B du code général des impôts.{{/si entreprise.siren}}</p>
+    <ul>
+      <li>Diagnostic à domicile&nbsp;: {{prix.diagnostic|euros}}.</li>
+      <li>Installation&nbsp;: {{prix.mise_en_service|euros}} pour la mise en service complète, jusqu’à {{prix.appareils_inclus}}&nbsp;appareils, puis {{prix.appareil_sup|euros}} par appareil en plus. Chaque fonction en plus a un prix fixe, indiqué dans le devis, à partir de {{prix.fonction_sup|euros}}.</li>
+      <li>Suivi annuel&nbsp;: {{prix.suivi|euros}} pour un an.</li>
+      <li>Aide ponctuelle&nbsp;: {{prix.aide_distance|euros}} la séance à distance, d’une heure au plus&nbsp;; à domicile, {{prix.heure_domicile_premiere|euros}} la première heure, puis {{prix.heure_domicile_suivante|euros}} l’heure.</li>
+    </ul>
+    <p>Les prix des autres prestations sont ceux de la page Tarifs, repris dans le devis. Le matériel et les abonnements nécessaires, comme l’accès à distance utilisé pour le suivi, ne sont jamais compris. Vous les achetez vous-même, à votre nom. Le devis en donne la liste et une estimation du prix.</p>
+    <p>Le prix de votre devis ne change pas en cours de contrat.</p>
+
+    <h2>5. Paiement</h2>
+    <p>Vous payez en espèces ou par virement bancaire, au choix. Je n’accepte ni les chèques ni les cartes bancaires. Le prix est le même, quel que soit le moyen de paiement.</p>
+    <ul>
+      <li>Diagnostic à domicile&nbsp;: à la fin de la visite.</li>
+      <li>Aide à domicile&nbsp;: à la fin de la visite, pour le temps passé, au prix horaire indiqué dans le devis.</li>
+      <li>Aide à distance&nbsp;: à la fin de la séance&nbsp;; à distance, le plus simple est le virement.</li>
+      <li>Installation, avec les fonctions en plus prévues au devis&nbsp;: la moitié à la fin de la première visite, le reste à la fin de la dernière visite.</li>
+      <li>Suivi annuel&nbsp;: en une fois, au début du suivi.</li>
+    </ul>
+    <p>Pour un contrat conclu chez vous, la loi m’interdit de recevoir le moindre paiement ou la moindre contrepartie, sous quelque forme que ce soit, espèces comprises, avant la fin d’un délai de 7&nbsp;jours à compter de sa conclusion. J’applique la même règle à tout devis que vous acceptez après une de mes visites, même par e-mail&nbsp;: je ne commence pas la prestation et je ne reçois rien avant le 8<sup>e</sup>&nbsp;jour qui suit votre acceptation. Par exemple, pour un devis accepté un lundi, la première visite et le premier paiement ont lieu au plus tôt le mardi de la semaine suivante.</p>
+    <p>Si, pendant une visite, vous me demandez un travail qui n’était pas prévu, je vous envoie un devis par e-mail, et la même règle s’applique.</p>
+    <p>Si votre domicile fiscal est en France, la loi interdit de payer en espèces une dette de plus de 1&nbsp;000&nbsp;€. Si le total d’un devis dépasse 1&nbsp;000&nbsp;€, en comptant les devis ajoutés pour la même installation, tous les versements se font par virement, le premier comme le dernier. Pour un paiement en espèces, merci de faire l’appoint.</p>
+    <p>Je vous remets une facture avant chaque paiement. Si vous payez en espèces, j’y écris «&nbsp;payée en espèces&nbsp;» et la date&nbsp;: elle vous sert de reçu.</p>
+    <p>Toute somme payée avant la fin d’une prestation est un acompte, et non des arrhes&nbsp;: elle nous engage tous les deux. Si vous vous rétractez dans le délai légal, elle vous est remboursée comme le prévoit l’article&nbsp;6.</p>
+    <p>Si un versement prévu n’est pas fait, je peux suspendre la suite de la prestation jusqu’au paiement.</p>
+    <p>Si je dois vous rembourser, je le fais avec le moyen de paiement que vous avez utilisé (en espèces si vous avez payé en espèces), sauf si vous acceptez expressément un autre moyen. Le remboursement est sans frais pour vous.</p>
+
+    <h2>6. Droit de rétractation</h2>
+    <p>Comme le prévoit la loi, vous avez 14&nbsp;jours pour vous rétracter d’un contrat conclu avec moi à distance ou chez vous, sans avoir à donner de motif. Le jour où le contrat est conclu ne compte pas&nbsp;: le délai commence le lendemain. S’il se termine un samedi, un dimanche ou un jour férié ou chômé, il est prolongé jusqu’au premier jour ouvrable suivant.</p>
+    <p>Pour vous rétracter, envoyez-moi avant la fin du délai le <a href="#formulaire">formulaire de rétractation</a> qui suit ces conditions, ou toute autre déclaration dénuée d’ambiguïté, par e-mail à {{contact.email}} ou par courrier à {{entreprise.nom_legal}}, {{entreprise.adresse}}. Vous pouvez aussi m’appeler au {{contact.telephone}}&nbsp;: dans ce cas, je vous conseille de confirmer votre décision par e-mail ou par courrier, pour en garder la preuve. Le formulaire n’est pas obligatoire. Gardez une trace de votre envoi&nbsp;: c’est à vous de prouver que vous vous êtes rétracté à temps.</p>
+    <p>Je ne commence une prestation avant la fin du délai que si vous me le demandez par écrit (un e-mail suffit). Dans ce message, écrivez que vous demandez que je commence avant la fin du délai, et que vous savez que vous perdrez votre droit de rétractation une fois la prestation entièrement réalisée. Si le contrat est conclu chez vous, ou si vous acceptez le devis après une de mes visites, même par e-mail, je ne commence jamais avant le 8<sup>e</sup>&nbsp;jour qui suit votre acceptation.</p>
+    <p>Une prestation entièrement réalisée ainsi avant la fin du délai, par exemple un diagnostic ou une séance d’aide à distance, ne peut plus être annulée par une rétractation. Si vous vous rétractez alors qu’une prestation commencée ainsi n’est pas terminée, vous me payez seulement un montant proportionné à ce que j’ai fait jusqu’à votre rétractation, par rapport au prix total. Sans votre demande écrite, vous ne me devez rien.</p>
+    <p>Je vous rembourse les sommes versées, moins ce montant éventuel, sans retard et au plus tard 14&nbsp;jours après avoir reçu votre décision, avec le moyen de paiement que vous avez utilisé, sauf si vous acceptez expressément un autre moyen. Ce remboursement est sans frais pour vous.</p>
+
+    <h2>7. Déroulement et délais</h2>
+    <p>Le devis indique la date de l’intervention ou le délai dans lequel je la réalise. Sans date ni délai convenu, je la réalise sans retard injustifié et au plus tard 30&nbsp;jours après la conclusion du contrat.</p>
+    <p>Je fais seulement ce que décrit le devis&nbsp;: réglage du boîtier domotique, pose et réglage d’appareils sur prise ou à piles, interface, automatismes, réseau, sauvegardes et prise en main.</p>
+    <p>Je ne fais aucun travail sur l’installation électrique&nbsp;: la loi le réserve à une personne qualifiée, que vous choisissez et payez directement. Je ne fais pas de télésurveillance&nbsp;: je ne surveille pas votre logement et je ne reçois pas vos alertes.</p>
+    <p>Si je ne respecte pas la date ou le délai prévu, vous pouvez suspendre vos paiements jusqu’à ce que je m’exécute, en me prévenant par écrit. Vous pouvez aussi me demander par écrit d’intervenir dans un délai supplémentaire raisonnable, puis annuler le contrat si je ne l’ai pas fait dans ce délai. Vous pouvez l’annuler sans attendre si je refuse d’intervenir, s’il est évident que je n’interviendrai pas, ou si la date prévue était pour vous une condition essentielle du contrat. Je vous rembourse alors toutes les sommes versées au plus tard 14&nbsp;jours après votre annulation.</p>
+    <p>Vous pouvez utiliser, copier et modifier, ou faire modifier par la personne de votre choix, les réglages, automatismes et tableaux de bord que je crée pour vous, sans limite de durée.</p>
+
+    <h2>8. Ce que je vous demande</h2>
+    <p>Pour que je puisse travailler, vous vous engagez à&nbsp;:</p>
+    <ul>
+      <li>me donner accès au logement à la date convenue, ainsi qu’à votre box Internet et aux comptes nécessaires&nbsp;;</li>
+      <li>acheter à votre nom, avant la date convenue, le matériel prévu dans le devis&nbsp;;</li>
+      <li>me donner des informations exactes sur votre logement, votre réseau et vos appareils, et me prévenir s’ils changent.</li>
+    </ul>
+    <p>Si l’un de ces points empêche l’intervention, nous fixons ensemble une nouvelle date. Je ne suis pas responsable d’un retard qui vient de l’un de ces points.</p>
+
+    <h2>9. Responsabilité</h2>
+    <p>Je suis responsable de la bonne réalisation de mes prestations. Pour un contrat conclu à distance, j’en suis responsable de plein droit. Je ne peux m’en dégager que si le problème vient de vous, du fait imprévisible et insurmontable d’une autre personne, ou d’un cas de force majeure.</p>
+    <p>Si une partie de la prestation ne correspond pas au devis, je la reprends sans frais. Vous gardez aussi tous vos autres droits&nbsp;: demander une baisse du prix, annuler le contrat ou être indemnisé.</p>
+    <p>Je ne vends pas de matériel. Si un appareil a lui-même un défaut, c’est son vendeur qui vous doit la garantie légale de conformité et la garantie des vices cachés. Si c’est mon intervention qui l’a endommagé, j’en réponds comme indiqué ci-dessus.</p>
+
+    <h2>10. Suivi annuel</h2>
+    <p>Le suivi annuel dure 12&nbsp;mois à partir de la date de début écrite dans le devis. Il comprend deux mises à jour de votre installation dans l’année, faites après une sauvegarde, le contrôle de vos sauvegardes et une réponse à vos questions par e-mail sous {{contact.delai_reponse}}. Les séances d’aide se paient à part, au prix de l’article&nbsp;4.</p>
+    <p>Il s’arrête tout seul à la fin&nbsp;: il n’y a pas de reconduction tacite. Si vous voulez continuer, je vous envoie un nouveau devis.</p>
+    <p>Vous pouvez y mettre fin à tout moment, par un simple e-mail. Je peux aussi y mettre fin, en vous prévenant par écrit au moins un mois à l’avance. Dans les deux cas, je vous rembourse les mois non servis, au prorata, au plus tard 14&nbsp;jours après la fin du suivi. Vous gardez vos autres droits, notamment ceux des articles&nbsp;6, 7 et&nbsp;9.</p>
+    <p>J’interviens sur votre installation seulement avec votre accord, par un accès à distance ouvert à votre nom.</p>
+
+    <h2>11. Données personnelles et téléphone</h2>
+    <p>Ce que je fais des informations que vous me donnez est expliqué sur la page <a href="confidentialite.html">Données personnelles</a>.</p>
+    <p>Si vous me donnez votre numéro de téléphone, je ne m’en sers que pour notre contrat. Il est interdit de démarcher par téléphone un consommateur sans son consentement préalable.</p>
+    <p>Quand j’accède à votre installation, chez vous ou à distance avec votre accord, je vois les données de vos appareils et de votre réseau (noms, réglages, historiques, relevés des capteurs), qui peuvent concerner les personnes de votre foyer et vos invités. Je ne les consulte, ne les règle et ne les sauvegarde que pour réaliser la prestation prévue au devis, et pendant sa durée. Je m’engage à&nbsp;:</p>
+    <ul>
+      <li>suivre vos instructions écrites (le devis et vos e-mails)&nbsp;;</li>
+      <li>garder ces données confidentielles, les protéger par des mesures de sécurité adaptées, et ne faire appel à aucun autre prestataire sans votre accord écrit, sauf ma messagerie, fournie par {{donnees.prestataires}}&nbsp;: nos e-mails, le devis et le compte rendu y passent, et elle peut les traiter hors de l’Espace économique européen, comme l’explique la page <a href="confidentialite.html">Données personnelles</a>&nbsp;;</li>
+      <li>vous aider à répondre aux demandes des personnes concernées, et vous prévenir sans tarder si ces données sont perdues, volées ou consultées sans droit&nbsp;;</li>
+      <li>à la fin du contrat, supprimer ou vous rendre, à votre choix, ce que j’ai pu en copier&nbsp;;</li>
+      <li>vous donner, si vous le demandez, les informations qui montrent que je respecte ces engagements, et vous permettre de le vérifier.</li>
+    </ul>
+
+    <h2>12. Réclamations et médiation</h2>
+    <p>En cas de problème, écrivez-moi par e-mail à {{contact.email}} ou par courrier à {{entreprise.adresse}}, ou appelez-moi au {{contact.telephone}}. Je vous réponds par écrit.</p>
+    <p>Si nous ne trouvons pas de solution, je vous redonne par écrit les coordonnées du médiateur de la consommation dont je relève. Vous pouvez le saisir gratuitement&nbsp;: {{mediateur.nom}}, {{mediateur.adresse}}, {{#si mediateur.site}}<a href="{{mediateur.site_lien}}">{{mediateur.site}}</a>{{/si mediateur.site}}{{#sinon mediateur.site}}{{mediateur.site}}{{/sinon mediateur.site}}. Il n’examine votre demande que si vous m’avez d’abord adressé une réclamation écrite, et si vous le saisissez dans l’année qui suit cette réclamation.</p>
+    <p>Vous n’êtes pas obligé de passer par ce médiateur. Mais pour une demande de 5&nbsp;000&nbsp;€ ou moins, la loi impose en principe, avant de saisir le juge, une tentative de conciliation (le conciliateur de justice est gratuit), de médiation ou de procédure participative.</p>
+
+    <h2>13. Droit applicable et tribunal</h2>
+    <p>Nos contrats sont soumis au droit français. En cas de litige, vous pouvez saisir, à votre choix, le tribunal compétent selon le code de procédure civile, ou celui du lieu où vous habitiez au moment de la conclusion du contrat ou du fait qui vous a causé un dommage.</p>
+
+    <h2 id="formulaire">Modèle de formulaire de rétractation</h2>
+    <div class="formulaire-type">
+      <p>MODÈLE DE FORMULAIRE DE RÉTRACTATION</p>
+      <p>(Veuillez compléter et renvoyer le présent formulaire uniquement si vous souhaitez vous rétracter du contrat.)</p>
+      <p>A l’attention de {{entreprise.nom_legal}}, {{entreprise.adresse}}, {{contact.email}}&nbsp;:</p>
+      <p>Je/nous (*) vous notifie/notifions (*) par la présente ma/notre (*) rétractation du contrat portant sur la vente du bien (*)/pour la prestation de services (*) ci-dessous&nbsp;:</p>
+      <p>Commandé le (*)/reçu le (*)&nbsp;:</p>
+      <p>Nom du (des) consommateur(s)&nbsp;:</p>
+      <p>Adresse du (des) consommateur(s)&nbsp;:</p>
+      <p>Signature du (des) consommateur(s) (uniquement en cas de notification du présent formulaire sur papier)&nbsp;:</p>
+      <p>Date&nbsp;:</p>
+      <p>(*) Rayez la mention inutile.</p>
+    </div>
+  </div>
+</main>
+{{> pied}}
+</body>
+</html>
