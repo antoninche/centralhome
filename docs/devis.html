@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self'; img-src 'self' data:; font-src 'self'; form-action 'self' mailto:; base-uri 'self'; object-src 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Demander un diagnostic | CentralHome, domotique à Marseille</title>
+<meta name="description" content="Décrivez votre logement en deux minutes. Je vous réponds par e-mail sous 2 jours ouvrés, avec un créneau pour le diagnostic à domicile (50 €).">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://antoninche.github.io/centralhome/devis.html">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F5F8FB" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B131B" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="CentralHome">
+<meta property="og:title" content="Demander un diagnostic | CentralHome, domotique à Marseille">
+<meta property="og:description" content="Décrivez votre logement en deux minutes. Je vous réponds par e-mail sous 2 jours ouvrés, avec un créneau pour le diagnostic à domicile (50 €).">
+<meta property="og:url" content="https://antoninche.github.io/centralhome/devis.html">
+<meta property="og:image" content="https://antoninche.github.io/centralhome/images/partage.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CentralHome, domotique locale à Marseille">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/icone-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="images/icone-180.png">
+<link rel="preload" href="polices/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=8810905d18">
+<script>document.documentElement.classList.add("js")</script>
+<script src="js/site.js?v=29fabce6e9" defer></script>
+<script src="js/devis.js?v=cf76672ab7" defer></script>
+</head>
+<body class="">
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+  <!-- Symbole CentralHome : une pièce vue de l'entrée (plafond, murs, sol en tomette) qui mène au mur du fond, au centre. Même dessin que src/favicon.svg. -->
+  <symbol id="logo" viewBox="0 0 48 48">
+    <rect width="48" height="48" rx="12" fill="#0369A1"/>
+    <path fill="#0288D1" d="M3.515 3.515A12 12 0 0 1 12 0h24a12 12 0 0 1 8.485 3.515L33 15H15z"/>
+    <path fill="#C0603C" d="M44.485 44.485A12 12 0 0 1 36 48H12a12 12 0 0 1-8.485-3.515L15 33h18z"/>
+    <rect x="15" y="15" width="18" height="18" fill="#FFFFFF"/>
+  </symbol>
+  <symbol id="i-courriel" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 7.2l8 5.8 8-5.8"/></symbol>
+  <symbol id="i-fleche" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-coche" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-fermer" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-reseau" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.6"/><circle cx="5" cy="5.5" r="1.9"/><circle cx="19" cy="5.5" r="1.9"/><circle cx="5" cy="18.5" r="1.9"/><circle cx="19" cy="18.5" r="1.9"/><path d="M6.5 6.9l3.5 3.2M17.5 6.9 14 10.1M6.5 17.1l3.5-3.2M17.5 17.1 14 13.9"/></symbol>
+  <symbol id="i-ampoule" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-radiateur" viewBox="0 0 24 24"><rect x="3" y="5" width="15" height="13" rx="2"/><path d="M7.5 5v13M12.5 5v13M18 9.5h3M5.5 18v2.2M15.5 18v2.2"/></symbol>
+  <symbol id="i-thermometre" viewBox="0 0 24 24"><path d="M10 14.3V5a2 2 0 0 1 4 0v9.3a4 4 0 1 1-4 0z"/><path d="M12 9.5v6.5"/></symbol>
+  <symbol id="i-goutte" viewBox="0 0 24 24"><path d="M12 3.5S6 10.1 6 14.5a6 6 0 0 0 12 0c0-4.4-6-11-6-11z"/></symbol>
+  <symbol id="i-porte" viewBox="0 0 24 24"><path d="M5.5 20.5V4.5A1.5 1.5 0 0 1 7 3h10a1.5 1.5 0 0 1 1.5 1.5v16M3.5 20.5h17"/><circle cx="15" cy="12.5" r="1"/></symbol>
+  <symbol id="i-eclair" viewBox="0 0 24 24"><path d="M13 3 5 13.5h6L10 21l8-10.5h-6z"/></symbol>
+  <symbol id="i-lune" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></symbol>
+  <symbol id="i-tuiles" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7.5" height="7.5" rx="2"/><rect x="13" y="3.5" width="7.5" height="7.5" rx="2"/><rect x="3.5" y="13" width="7.5" height="7.5" rx="2"/><rect x="13" y="13" width="7.5" height="7.5" rx="2"/></symbol>
+  <symbol id="i-personnes" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19.5a5.5 5.5 0 0 1 11 0"/><circle cx="16.8" cy="9.2" r="2.6"/><path d="M15.6 14.3a4.6 4.6 0 0 1 5.4 4.5"/></symbol>
+  <symbol id="i-tablette" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M11 17.5h2"/></symbol>
+  <symbol id="i-euro" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.7a4.2 4.2 0 1 0 0 6.6M7 10.8h6M7 13.2h6"/></symbol>
+  <symbol id="i-document" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-cadenas" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
+  <symbol id="i-prise" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6.5 8h11v3a5.5 5.5 0 0 1-11 0zM12 16.5V21"/></symbol>
+</svg>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="entete" data-entete>
+  <div class="conteneur entete-barre">
+    <a class="marque" href="index.html">
+      <svg class="marque-signe" aria-hidden="true" focusable="false"><use href="#logo"/></svg>
+      <span class="marque-textes"><span class="marque-nom">Central<span class="marque-nom-fin">Home</span></span><span class="marque-lieu">Domotique locale à Marseille</span></span>
+    </a>
+    <nav class="nav" id="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="usages.html">Usages</a></li>
+        <li><a href="tarifs.html">Tarifs</a></li>
+        <li><a href="deroulement.html">Déroulement</a></li>
+        <li><a href="qui-je-suis.html">Qui je suis</a></li>
+        <li><a href="questions.html">Questions</a></li>
+      </ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="bouton bouton-petit" href="devis.html"><span class="libelle-long">Demander un diagnostic</span><span class="libelle-court">Diagnostic</span></a>
+      <button type="button" class="menu-bouton" aria-expanded="false" aria-controls="menu" data-menu-bouton>
+        <svg class="icone ouvre" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg>
+        <svg class="icone ferme" aria-hidden="true" focusable="false"><use href="#i-fermer"/></svg>
+        <span class="menu-libelle">Menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+<main id="contenu">
+  <div class="conteneur page-tete">
+    <p class="surtitre">Premier contact</p>
+    <h1>Demander un diagnostic</h1>
+    <p class="chapo">Deux minutes pour me décrire votre logement et ce que vous aimeriez. Je vous réponds par e-mail sous 2 jours ouvrés, avec un créneau pour le diagnostic. Vous ne payez rien en envoyant ce formulaire.</p>
+  </div>
+
+  <div class="conteneur devis-grille">
+    <div class="carte-form">
+      <form id="form-devis" action="mailto:an.chenavaz@gmail.com" method="post" enctype="text/plain" novalidate
+            data-courriel="bW9jLmxpYW1nQHphdmFuZWhjLm5h" data-prenom-destinataire="Antonin">
+
+        <div class="champs-deux">
+          <div class="champ">
+            <label for="prenom">Votre prénom <span class="requis" aria-hidden="true">*</span></label>
+            <input type="text" id="prenom" name="prenom" autocomplete="given-name" maxlength="60" required aria-describedby="erreur-prenom">
+            <span class="message-erreur" id="erreur-prenom" data-erreur-pour="prenom"></span>
+          </div>
+          <div class="champ">
+            <label for="commune">Commune ou arrondissement <span class="requis" aria-hidden="true">*</span></label>
+            <input type="text" id="commune" name="commune" autocomplete="address-level2" maxlength="80" required aria-describedby="aide-commune erreur-commune">
+            <span class="champ-aide champ-aide-dessous" id="aide-commune">Pour vérifier que vous êtes dans ma zone.</span>
+            <span class="message-erreur" id="erreur-commune" data-erreur-pour="commune"></span>
+          </div>
+        </div>
+
+        <div class="champ">
+          <label for="courriel">Votre adresse e-mail <span class="requis" aria-hidden="true">*</span></label>
+          <input type="email" id="courriel" name="courriel" autocomplete="email" maxlength="120" required aria-describedby="aide-courriel erreur-courriel">
+          <span class="champ-aide champ-aide-dessous" id="aide-courriel">Je vous réponds à cette adresse. Pas de démarchage.</span>
+          <span class="message-erreur" id="erreur-courriel" data-erreur-pour="courriel"></span>
+        </div>
+
+        <fieldset class="groupe">
+          <legend>Votre demande</legend>
+          <div class="choix-cartes">
+            <label class="choix-carte"><input type="radio" name="demande" value="Diagnostic à domicile" checked><strong>Un diagnostic chez moi</strong><span>Environ une heure, 50&nbsp;€. Une page de compte rendu et une proposition chiffrée.</span></label>
+            <label class="choix-carte"><input type="radio" name="demande" value="Une question d’abord"><strong>Une question d’abord</strong><span>Je vous réponds par e-mail, sans engagement.</span></label>
+            <label class="choix-carte"><input type="radio" name="demande" value="Suivi ou réglage"><strong>Le suivi ou un réglage</strong><span>Pour une installation domotique qui existe déjà.</span></label>
+          </div>
+        </fieldset>
+
+        <div class="champ">
+          <label for="message">Votre message <span class="facultatif">(facultatif)</span></label>
+          <span class="champ-aide" id="aide-message">Par exemple&nbsp;: ce que vous avez déjà, ce que vous aimeriez automatiser. N’indiquez ni adresse ni mot de passe.</span>
+          <textarea id="message" name="message" rows="4" maxlength="1500" aria-describedby="aide-message"></textarea>
+        </div>
+
+        <details class="preciser">
+          <summary>Préciser votre logement <span class="facultatif">(facultatif)</span></summary>
+          <div class="preciser-corps">
+            <fieldset class="groupe">
+              <legend>Type de logement</legend>
+              <div class="puces">
+                <label class="puce"><input type="radio" name="logement" value="appartement">Appartement</label>
+                <label class="puce"><input type="radio" name="logement" value="maison">Maison</label>
+              </div>
+            </fieldset>
+            <fieldset class="groupe">
+              <legend>Ce que vous avez déjà</legend>
+              <div class="puces">
+                <label class="puce"><input type="checkbox" name="objets" value="ampoules ou prises connectées">Ampoules ou prises connectées</label>
+                <label class="puce"><input type="checkbox" name="objets" value="thermostat ou têtes thermostatiques">Thermostat ou têtes thermostatiques</label>
+                <label class="puce"><input type="checkbox" name="objets" value="capteurs (porte, fuite, température)">Capteurs</label>
+                <label class="puce"><input type="checkbox" name="objets" value="enceinte connectée">Enceinte connectée</label>
+                <label class="puce"><input type="checkbox" name="objets" value="ancienne tablette">Ancienne tablette</label>
+              </div>
+            </fieldset>
+            <fieldset class="groupe">
+              <legend>Ce qui vous intéresse le plus</legend>
+              <div class="puces">
+                <label class="puce"><input type="checkbox" name="usages" value="lumières et ambiances">Lumières</label>
+                <label class="puce"><input type="checkbox" name="usages" value="chauffage pièce par pièce">Chauffage</label>
+                <label class="puce"><input type="checkbox" name="usages" value="alertes (fuite d’eau, porte ouverte)">Alertes</label>
+                <label class="puce"><input type="checkbox" name="usages" value="consommation électrique">Consommation</label>
+                <label class="puce"><input type="checkbox" name="usages" value="Wi-Fi et sauvegardes"><span class="insecable">Wi-Fi</span> et sauvegardes</label>
+              </div>
+            </fieldset>
+          </div>
+        </details>
+
+        <div class="form-actions">
+          <button type="submit" class="bouton">Envoyer ma demande<svg class="icone" aria-hidden="true" focusable="false"><use href="#i-fleche"/></svg></button>
+          <p class="form-rassurance">Je réponds sous 2 jours ouvrés. Rien n’est engagé avant votre accord écrit.</p>
+        </div>
+        <p class="mention-donnees"><span aria-hidden="true">*</span> Champs nécessaires pour vous répondre. Responsable du traitement&nbsp;: Antonin Chenavaz. J’utilise vos réponses seulement pour traiter votre demande, organiser le diagnostic et préparer votre proposition (mesures précontractuelles prises à votre demande). Je ne les revends pas, je ne les utilise pas pour de la publicité, et je les supprime un an après notre dernier échange si aucune proposition n’est acceptée. Vous pouvez y accéder, les corriger ou les faire effacer en m’écrivant. <a href="confidentialite.html">Vos données, vos droits et la réclamation auprès de la CNIL</a>.</p>
+        <div class="etat-envoi" data-etat-envoi aria-live="polite"></div>
+      </form>
+      <noscript><p class="petit">Le formulaire fonctionne mieux avec JavaScript activé. Vous pouvez aussi m’écrire à <span class="cm cm-arobase" data-a="an.chenavaz" data-b="gmail.com"></span>.</p></noscript>
+    </div>
+
+    <aside class="aside-devis" aria-label="Informations">
+      <section class="aside-carte" aria-labelledby="t-suite">
+        <h2 id="t-suite">Après votre demande</h2>
+        <ol class="suite">
+          <li><strong>Je vous réponds par e-mail</strong><span>Moi-même, sous 2 jours ouvrés, avec un créneau pour la visite.</span></li>
+          <li><strong>Le diagnostic chez vous</strong><span>Environ une heure, 50&nbsp;€, à une date qui vous convient.</span></li>
+          <li><strong>Vous recevez la proposition</strong><span>Une page de compte rendu et un prix fixe pour l’installation. Vous restez libre de ne pas donner suite.</span></li>
+        </ol>
+      </section>
+      <section class="aside-carte" aria-labelledby="t-direct">
+        <h2 id="t-direct">Vous préférez écrire directement&nbsp;?</h2>
+        <div class="contact-direct">
+          <a href="devis.html" data-lien="bW9jLmxpYW1nQHphdmFuZWhjLm5hOm90bGlhbQ=="><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-courriel"/></svg><span class="cm cm-arobase" data-a="an.chenavaz" data-b="gmail.com"></span></a>
+        </div>
+        <p class="petit">Je vous réponds sous 2 jours ouvrés, avec mon numéro de téléphone et un créneau pour le diagnostic. Mes coordonnées complètes, téléphone compris, sont dans les <a href="mentions-legales.html">mentions légales</a>.</p>
+      </section>
+      <section class="aside-carte" aria-labelledby="t-savoir">
+        <h2 id="t-savoir">Bon à savoir</h2>
+        <ul class="coches">
+          <li>Un prix fixe, écrit dans la proposition.</li>
+          <li>Le matériel est acheté à votre nom.</li>
+          <li>Aucun travail sur l’installation électrique.</li>
+          <li>Comme le prévoit la loi, 14&nbsp;jours pour vous rétracter après un accord à distance ou à domicile.</li>
+        </ul>
+      </section>
+    </aside>
+  </div>
+</main>
+<footer class="pied">
+  <div class="conteneur">
+    <div class="pied-grille">
+      <div>
+        <a class="marque" href="index.html">
+          <svg class="marque-signe" aria-hidden="true" focusable="false"><use href="#logo"/></svg>
+          <span class="marque-textes"><span class="marque-nom">Central<span class="marque-nom-fin">Home</span></span><span class="marque-lieu">Domotique locale à Marseille</span></span>
+        </a>
+        <p class="pied-texte">J’installe chez des particuliers, à Marseille, une domotique locale basée sur Home Assistant, puis j’en assure le suivi s’ils le souhaitent.</p>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul class="pied-contact">
+          <li><a href="devis.html" data-lien="bW9jLmxpYW1nQHphdmFuZWhjLm5hOm90bGlhbQ=="><svg class="icone" aria-hidden="true" focusable="false"><use href="#i-courriel"/></svg><span class="cm cm-arobase" data-a="an.chenavaz" data-b="gmail.com"></span></a></li>
+          <li><a href="https://www.linkedin.com/in/antonin-chenavaz-9b9215421/">LinkedIn</a></li>
+          <li>Marseille et alentours, à 45&nbsp;minutes au plus en transports en commun</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Le site</h2>
+        <ul>
+          <li><a href="usages.html">Usages</a></li>
+          <li><a href="tarifs.html">Tarifs</a></li>
+          <li><a href="deroulement.html">Déroulement</a></li>
+          <li><a href="qui-je-suis.html">Qui je suis</a></li>
+          <li><a href="questions.html">Questions et réponses</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Informations</h2>
+        <ul>
+          <li><a href="devis.html">Demander un diagnostic</a></li>
+          <li><a href="cgv.html">Conditions générales de vente</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="confidentialite.html">Données personnelles</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-legal">
+      
+      <p>Home Assistant est une marque de l’Open Home Foundation. Matter et Zigbee sont des marques de la Connectivity Standards Alliance, Thread est une marque du Thread Group. Je ne suis affilié à aucune de ces organisations, ni à Nabu Casa.</p>
+      <p>Ce site ne dépose aucun cookie et ne mesure pas l’audience. © 2026 Antonin Chenavaz.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
