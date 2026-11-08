@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Bannière LinkedIn (1512 x 256)</title>
+<!-- Bannière de la page entreprise LinkedIn. outils/visuels.py remplace le logo par sa version en tracés,
+     puis enregistre marque/banniere-linkedin-1512x256.png. Le message tient dans le mur du fond :
+     LinkedIn rogne les côtés sur téléphone et pose le logo de la page en bas à gauche. -->
+<style>
+@font-face { font-family: "Inter"; src: url("../src/polices/inter-latin.woff2") format("woff2"); font-weight: 100 900; }
+html, body { margin: 0; padding: 0; }
+body { width: 1512px; height: 256px; overflow: hidden; position: relative; font-family: "Inter", sans-serif; background: #0369A1; }
+.piece { position: absolute; inset: 0; display: block; }
+.mur { position: absolute; left: 302.4px; top: 51.2px; width: 907.2px; height: 153.6px;
+  display: flex; align-items: center; justify-content: center; gap: 34px; }
+.logo svg { height: 58px; width: auto; display: block; } .logo { flex: none; }
+.trait { width: 1px; height: 84px; background: rgba(11, 30, 45, 0.14); flex: none; }
+.message { display: flex; flex-direction: column; gap: 9px; }
+.surtitre { margin: 0; display: inline-flex; align-items: center; gap: 9px; font-size: 15px; font-weight: 680;
+  letter-spacing: 0.09em; text-transform: uppercase; color: #0369A1; }
+.surtitre::before { content: ""; width: 9px; height: 9px; border-radius: 2.5px; background: currentColor; }
+.phrase { margin: 0; font-size: 31px; line-height: 1.14; font-weight: 650; letter-spacing: -0.018em; color: #0B1E2D; }
+</style>
+</head>
+<body>
+<svg class="piece" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1512 256" width="1512" height="256" aria-hidden="true">
+<defs>
+<pattern id="points" width="22" height="22" patternUnits="userSpaceOnUse"><rect x="9.6" y="9.6" width="2.8" height="2.8" rx=".7" fill="#FFFFFF" fill-opacity=".2"/></pattern>
+<filter id="ombre" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#04131F" flood-opacity=".22"/></filter>
+</defs>
+<path fill="#0288D1" d="M0 0H1512L1209.6 51.2H302.4z"/><path fill="#0369A1" d="M0 0L302.4 51.2V204.8L0 256z"/><path fill="#0369A1" d="M1512 0L1209.6 51.2V204.8L1512 256z"/><path fill="#C0603C" d="M0 256L302.4 204.8H1209.6L1512 256z"/><rect x="302.4" y="51.2" width="907.2" height="153.6" fill="#FFFFFF"/><path fill="url(#points)" d="M0 0L302.4 51.2V204.8L0 256z"/><path fill="url(#points)" d="M1512 0L1209.6 51.2V204.8L1512 256z"/><g fill="none" stroke="#FFFFFF" stroke-opacity=".75" stroke-width="3" stroke-linecap="round" stroke-dasharray="0 9"><path d="M155.9 84.5L289.7 94.2"/><path d="M275.9 157.9L292.1 156.9"/><path d="M1356.1 84.5L1222.3 94.2"/><path d="M1236.1 157.9L1219.9 156.9"/></g><g><title>Lumière</title><rect x="96" y="56" width="52" height="52" rx="15" fill="#FFFFFF" filter="url(#ombre)"/><g transform="translate(109 69) scale(1.0833)" fill="none" stroke="#0369A1" stroke-width="1.662" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></g></g><g><title>Chauffage</title><rect x="216" y="134" width="52" height="52" rx="15" fill="#FFFFFF" filter="url(#ombre)"/><g transform="translate(229 147) scale(1.0833)" fill="none" stroke="#0369A1" stroke-width="1.662" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="15" height="13" rx="2"/><path d="M7.5 5v13M12.5 5v13M18 9.5h3M5.5 18v2.2M15.5 18v2.2"/></g></g><g><title>Alerte fuite d'eau</title><rect x="1364" y="56" width="52" height="52" rx="15" fill="#FFFFFF" filter="url(#ombre)"/><g transform="translate(1377 69) scale(1.0833)" fill="none" stroke="#0369A1" stroke-width="1.662" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5S6 10.1 6 14.5a6 6 0 0 0 12 0c0-4.4-6-11-6-11z"/></g></g><g><title>Consommation</title><rect x="1244" y="134" width="52" height="52" rx="15" fill="#FFFFFF" filter="url(#ombre)"/><g transform="translate(1257 147) scale(1.0833)" fill="none" stroke="#0369A1" stroke-width="1.662" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3 5 13.5h6L10 21l8-10.5h-6z"/></g></g>
+</svg>
+<div class="mur">
+<div class="logo" data-logo><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 48" role="img" aria-label="CentralHome"><title>CentralHome</title><rect width="48" height="48" rx="12" fill="#0369A1"/><path fill="#0288D1" d="M3.515 3.515A12 12 0 0 1 12 0h24a12 12 0 0 1 8.485 3.515L33 15H15z"/><path fill="#C0603C" d="M44.485 44.485A12 12 0 0 1 36 48H12a12 12 0 0 1-8.485-3.515L15 33h18z"/><rect x="15" y="15" width="18" height="18" fill="#FFFFFF"/><text x="61" y="33" font-family="Inter" font-weight="700" font-size="33" letter-spacing="-0.33"><tspan fill="#0B1E2D">Central</tspan><tspan fill="#0369A1">Home</tspan></text></svg></div>
+<span class="trait" aria-hidden="true"></span>
+<div class="message">
+<p class="surtitre">Domotique locale à Marseille</p>
+<p class="phrase">Vos objets connectés,<br>une seule application.</p>
+</div>
+</div>
+</body>
+</html>
