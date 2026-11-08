@@ -70,4 +70,4 @@ Inter, seule police, celle du site. Le nom s'écrit en un seul mot, en graisse 7
 
 La trame est faite de petits carrés de 2,8 px tous les 22 px, comme le mur du fond, en `#0277BD` à 34 % (en blanc à 20 % sur un fond bleu). Elle habille le haut des pages, l'appel final, la bannière et l'image de partage.
 
-L'illustration, `src/images/illustration.svg`, reprend la pièce du symbole en grand, avec le boîtier au centre, relié à la lumière, au chauffage, à la consommation électrique et à un détecteur de fuite. Un seul fichier sert pour le mode clair et le mode sombre.
+L'illustration du site, [`docs/images/illustration.svg`](../docs/images/illustration.svg), reprend la pièce du symbole en grand, avec le boîtier au centre, relié à la lumière, au chauffage, à la consommation électrique et à un détecteur de fuite. Un seul fichier sert pour le mode clair et le mode sombre.
