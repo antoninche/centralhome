@@ -53,7 +53,7 @@ Les logos existent en SVG, avec le nom vectorisé, et en PNG, pour fond clair et
 
 </details>
 
-## Organisation du dépôt
+## Organisation du dépôt 
 
 | Dossier | Contenu |
 |---|---|
